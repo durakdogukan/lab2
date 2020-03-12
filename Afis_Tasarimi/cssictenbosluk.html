@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS İçten Boşluk (Padding)</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        overflow-y: scroll;
+        top: 100px;
+        left: 320px;
+        width: 1600px;
+        height: 860px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS İçten Boşluk (Padding)</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active" href="#home">Temel Bilgiler</h1></li>
+        <li><a  href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a  href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a  href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active" >CSS Sitilleri</h1></li>
+        <li><a  href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><a href="csstablolar.html">CSS Tablolar</a></li>
+        <li><h1 style="text-align: center"  class="active">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a href="csskenarliklar.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a class="active" href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+
+    </ul>
+</div>
+
+
+<div class="ex2">
+    <br><h2 style="color: darkslateblue">CSS İçten Boşluk (Padding)</h2>
+    <br><b>Padding</b> özelliği bir HTML elementinin kenarlarının içinde bir boşluk yaratmamızı sağlar.
+    <br>Kenardan içerdeki bu boşlukları belirlerken üst, sol, alt ve sağ için ayrı ayrı belirlenebileceği gibi tek bir css koduyla da bunlar hızlıca belirlenebilir.
+    <br>Tüm padding komutları:
+    <br><li><b>padding -</b> Hızlı kullanım</li>
+    <li><b>padding-top -</b> Üstten boşluk</li>
+    <li><b>padding-right -</b> Sağdan boşluk</li>
+    <li><b>padding-bottom -</b> Alttan boşluk</li>
+    <li><b>padding-left -</b> Soldan boşluk</li>
+    <br>Alabileceği değerler:
+    <br><li><b>genişlik belirtme -</b>px, em, pt gibi ölçülerle genişliği belirtme</li>
+    <li><b>yüzde kullanma (%) -</b> İçerik genişliğine göre oranlar</li>
+    <br><h2 style="color: chocolate">Ayrı Ayrı İç Boşlukları Ayarlamak</h2>
+    <br></br>Üst, sağ, alt ve sol boşlukları ayrı ayrı ayarlanabilir. Bunun için padding komutuna araya tire (-) koyarak ilgili yönün ingilizcesini yazıyoruz.
+    <br><img src="images/csskodu49.png">
+    <br>Yukarıdaki örnekte üst ve alt boşluklar içerden 10 piksel yüksekliğinde, sağ ve sol boşluklar içerden 20 piksel genişliğinde olacaktır.
+    <br><h2 style="color: chocolate">İç Boşlukları Ayarlamanın Kısa Yolu</h2>
+    <br></br>Sadece <b>padding</b> kullanarak hepsi için geçerli tek bir tane değer yazabildiğimiz gibi sırasıyla üst, sağ, alt, sol şeklinde değerler girerek de yukarıdaki dört kodun tamamını tek kodda yazabiliriz:
+    <br><img src="images/csskodu50.png">
+    <br>Yukarı ve alt değeri ile Sağ ve sol değeri aynı olan ifadelerde şu şekilde de kullanabileceğimizi unutmayalım:
+    <br><img src="images/csskodu51.png">
+    <br>Yazdığımız bu kod, bir önceki yazdığımız kod ile aynı işlevi görecektir.
+    <br>Padding ve Margin'in farkı ile ilgili   <b><a style="color: darkblue" href="csskutumodeli.html"> buradan bilgi</a></b> alabilirsiniz.
+
+
+
+
+</div>
+
+</body>
+</html>

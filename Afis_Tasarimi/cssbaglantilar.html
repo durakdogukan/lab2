@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Bağlantılar</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        overflow-y: scroll;
+        top: 100px;
+        left: 320px;
+        width: 1600px;
+        height: 860px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS Bağlantılar</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active">Temel Bilgiler</h1></li>
+        <li><a  href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a  href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a  href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active" >CSS Sitilleri</h1></li>
+        <li><a  href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a class="active" href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><a href="csstablolar.html">CSS Tablolar</a></li>
+        <li><h1 style="text-align: center"  class="active">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a href="csskenarliklar.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+        <li><a href="#about">CSS İçten Boşluk (Padding)</a></li>
+
+    </ul>
+</div>
+
+<div class="ex2">
+    <br><h2 style="color: darkslateblue">CSS Bağlantılar</h2>
+    <br>Sitenizdeki bağlantıları CSS kullanarak şekillendirmek için bazı özel eklerden faydalanılır.
+    <br>Bir bağlantı dört farklı şekilde stillendirilebilir. Bunlar:
+    <br><li>a:link - Normal link görünüşü</li>
+    <li>a:visited - Ziyaret edilmiş siteye giden link görünümü</li>
+    <li>a:hover - Fare ile üzerine gelindiğindeki görünüş</li>
+    <li>a:active - Tıklanılan andaki görüntüsü</li>
+    <br>Yukarıdaki tüm süreçler için biçimlendirme yapmamız mümkün:
+    <br><img src="images/csskodu28.png">
+    <br>Yukarıdaki bağlantı biçimlerini sıralarken uymamız gereken bir sıra vardır. Bu sıraya uyulmazsa bağlantı görünümleri doğru çalışmayabilir.
+    <br><li>a:hover her zaman a:link ve a:visited den SONRA gelmeli.</li>
+    <li>a:active her zaman a:hover dan SONRA gelmeli.</li>
+</div>
+
+</body>
+</html>

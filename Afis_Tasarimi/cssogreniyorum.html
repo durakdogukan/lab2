@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Nedir?</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        top: 100px;
+        left: 320px;
+        width: 1500px;
+        height: 100px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS Nedir ?</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active" href="#home">Temel Bilgiler</h1></li>
+        <li><a class="active" href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a  href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a  href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active" >CSS Sitilleri</h1></li>
+        <li><a  href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><a href="csstablolar.html">CSS Tablolar</a></li>
+        <li><h1 style="text-align: center"  class="active">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a href="csskenarliklar.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+        <li><a href="#about">CSS İçten Boşluk (Padding)</a></li>
+
+
+    </ul>
+</div>
+
+<div class="ex1">
+
+    <h1>CSS Tutorial</h1>
+    <input type="button" autofocus placeholder="Enter your username" maxlength="10" required>
+</div>
+
+<div class="ex2">
+    <br> <h2 style="color: darkslateblue">CSS Nedir?</h2>
+    <br><h2 style="color: darkslateblue">Neye İhtiyacın Var?</h2>
+    <br> Bu siteye devam etmeden önce temel düzeyde HTML/XHTML bilmen gerekiyor.
+    <br><h2 style="color: darkslateblue">CSS Nedir?</h2>
+    <br>CSS bir kısaltmadır. "Cascading Style Sheets" kelimesinin baş harflerinden oluşur. Dilimizdeki anlamı: Basamaklı Stil Sayfası.
+    <br> Stiller, bir HTML elementinin nasıl görüneceğini belirleme olanağı sağlar.
+    <br>Stiller HTML 4.0'da bir problemi çözmemizi sağlar. Siteyi görselleştirme!
+    <br>HTML dosyamızın daha anlaşılır olmasını sağlar. Stillerimiz tek bir dosyada toplanır ve kolaylıkla okunur - değiştirilir.
+    <br>Stil dosyalarımızın uzantısı *.css dir. CSS Dosyası birçok stil barındırabilir.
+
+    <br><h2 style="color: darkslateblue">CSS Büyük Bir Problemi Çözüyor!</h2>
+
+    <br>HTML ilk ortaya çıktığında siyah beyaz bir televizyondan farksız değildi. Her zaman aynı kodlar kullanılır ve aynı biçimde yazılar görünürdü. Örneğin bir H1 elementiyle başlık yazıp farklı bir yerdeki H1 elementini değişik bir renk ve tarzda gösteremiyorduk.
+    <br>HTML 3.2 ile elementler bazı yeni özellikler kazandı. Örneğin FONT elementine color özelliği eklendi. Tabi bu da tam bir çözüm değildi.
+    <br>Ne zaman ki HTML 3.2 çıktı, dünya değişti! Artık CSS vardı, üstelik günümüzde tüm tarayıcılar CSS desteklemektedir!
+    <br> <h2 style="color: darkslateblue">CSS Hayat Kurtarır</h2>
+    <br>Biraz abartı mı oldu? Ancak şurası kesin. İşimizi kolaylaştırıyor. CSS, HTML de kullanılan elementlerin (tag) nasıl görüneceğini bildirir. Bu doğru. Peki ya başka?
+    <br>Stiller css uzantılı dosyalara kaydedilerek kullanılır, görüntüyü hızlı ve etkili bir şekilde değiştirmenize yarar, düzenlemesi kolaydır, web sitenize kod fazlalığı yaratmaz. İşte bu kadar marifetli.
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Tablolar</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        overflow-y: scroll;
+        top: 100px;
+        left: 320px;
+        width: 1600px;
+        height: 860px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 800px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px;
+    }
+
+    tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS Tablolar</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active" href="#home">Temel Bilgiler</h1></li>
+        <li><a  href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a  href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a  href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active" >CSS Sitilleri</h1></li>
+        <li><a  href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><a class="active" href="csstablolar.html">CSS Tablolar</a></li>
+        <li><h1 style="text-align: center"  class="active">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a href="csskenarliklar.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+
+    </ul>
+</div>
+
+
+<div class="ex2">
+    <br><h2 style="color: darkslateblue">CSS Tablolar</h2>
+
+    <br><table>
+        <tr>
+            <th>Dil</th>
+            <th>Neden Lazım</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Temel web sayfası yapım bilgisi</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Siteyi görselleştirme</td>
+        </tr>
+        <tr>
+            <td>PHP,ASP</td>
+            <td>İşlevsel siteler yapmak</td>
+        </tr>
+        <tr>
+            <td>MySQL</td>
+            <td>Verileri yönetmek</td>
+        </tr>
+    </table>
+    <br>Tablolarla ilgili bilmeniz gereken komutlar:
+    <br><li>border</li>
+    <li>border-collapse</li>
+    <li>width ve height</li>
+    <br> <b>NOT:</b> Tablolarda nesneler hücrelerde yer alır. HTML'de hücreler TD elementi ile belirtilir. Dolayısıyla aşağıda anlatılan kodların çoğu TD elementine yöneliktir.
+    <br><h2 style="color: chocolate">border-collapse: Kenarlıkları Kaldır</h2>
+    <br>Tablo özelliği olarak bunu belirtirsek tablonun varsayılan kenarlıkları görülmeyecektir.
+    <br><img src="images/csskodu36.png">
+    <br><h2 style="color: chocolate">width/height: Tablo Genişliği ve Yüksekliği</h2>
+    <br>Tablo ve tablo hücreleri için genişlik (width) ve yükseklik (height) belirtmemizi sağlar.
+    <br><img src="images/csskodu37.png">
+    <br>Yukarıdaki örnekte hucre1 adlı hücre 100 piksel genişlik ve 200 piksel yüksekliğe sahipken, hucre2 400 piksel genişlik ve 100 piksel yüksekliğe sahiptir.
+    <br>Diğer Tablo Şekillendirme Komutları
+    <br><li><b>text-align:</b> Tablo içindeki yazıların hizasını belirlersiniz.</li>
+    <li><b>padding:</b> Tablo içinden belirtilen değerde boşluk verdirir.</li>
+    <li><b>background-color:</b> Arkaplan rengini belirtir.</li>
+    <li><b>color:</b> Yazı rengini belirtir.</li>
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Yazı Tipleri</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        overflow-y: scroll;
+        top: 100px;
+        left: 320px;
+        width: 1600px;
+        height: 860px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS Yazı Tipleri</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active" href="#home">Temel Bilgiler</h1></li>
+        <li><a  href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a  href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a  href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active" >CSS Sitilleri</h1></li>
+        <li><a  href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a class="active" href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><a href="csstablolar.html">CSS Tablolar</a></li>
+        <li><h1 style="text-align: center"  class="active">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a href="csskenarliklar.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+
+
+    </ul>
+</div>
+<div class="ex2">
+    <h2 style="color: darkslateblue">CSS Yazı Tipleri</h2>
+    <br>Bu sayfada HTML sayfanızda kullandığınız yazıların yazı tipi özelliklerini nasıl değiştirebileceğiniz hakkında bilgi verilecektir.
+    <br>Yazı tiplerini biçimlendirirken en sık kullandığımız komutlar:
+    <br><li>font-family</li>
+    <li>font-size</li>
+    <li>font-style</li>
+    <li>font-weight</li>
+    <br><h2 style="color: chocolate">font-family: Yazı Tipi Belirlemek</h2>
+    <br>Yazı tipleri klasörümüzü açtığımızda birçok yazı tipi görürüz. Bunları HTML sayfamızda kullanmak için adını belirtmemiz gerekir. İşte bu kod yazı tipi seçmemizde bize yardımcı olacaktır.
+    <br><img src="images/csskodu19.png">
+    <br>Yukarıdaki birinci örnekte sadece tek yazı tipi adı belirttik (Times New Roman), ancak bir sonrakinde aralarına virgül koyarak daha fazla belirttik. Bu tarz kullanımlarda öncelikle dikkate alınan ilk verdiğimiz yazı tipi olacaktır. Eğer verdiğimiz yazı tipi o kullanıcıda yoksa bir sonraki ile görüntülenecektir.
+    <br><h2 style="color: chocolate">font-size: Yazının Büyüklüğü (Puntosu)</h2>
+    <br>Yazı büyüklüğünü font-size ile belirtiriz. Ölçü birimi olarak aşağıdakileri kullanabiliriz:
+    <br><li>% : yüzde olarak belirtmek</li>
+    <li>in : inç olarak belirtmek</li>
+    <li>cm : santim olarak belirtmek</li>
+    <li>mm : milimetre olarak belirtmek</li>
+    <li>em : varsayılan yazı büyüklüğüne göre oranlamak</li>
+    <li>pt : punto olarak belirtmek</li>
+    <li>px : piksel olarak belirtmek</li>
+    <br>Örneğin yazımızın 12 punto olması için yazmamız gereken komut:
+    <br><img src="images/csskodu20.png">
+    <br>14 piksellik bir yüksekliğe sahip yazı istiyorsak:
+    <br><img src="images/csskodu21.png">
+    <br>Varsayılan yazı tipinin %150 fazlasını EM ile belirtirsek:
+    <br><img src="images/csskodu22.png">
+    <br>Yukarıdaki örneği yüzde ile ifade etmek isteseydik:
+    <br><img src="images/csskodu23.png">
+    <br><h2 style="color: chocolate">font-style: İtalik (Sağa Yatık) Yazmak</h2>
+    <br>Yazımızın sağa yatık (italic) olması için aşağıdaki kodu kullanabiliriz.
+    <br><img src="images/csskodu24.png">
+    <br>Eğer italik bir yazıyı iptal edeceksek aşağıdaki kodu yazmalıyız:
+    <br><img src="images/csskodu25.png">
+    <br><h2 style="color: chocolate">font-weight: Kalın Yazmak</h2>
+    <br>Yazımızın kalın (bold) olmasını istiyorsak aşağıdaki kodu kullanmalıyız.
+    <br><img src="images/csskodu26.png">
+    <br>Eğer kalın bir yazıyı normal haline dönüştüreceksek aşağıdaki kodu yazmalıyız:
+    <br><img src="images/csskodu27.png">
+</div>
+
+</body>
+</html>

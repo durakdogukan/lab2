@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Kenarlıklar (Border)</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        overflow-y: scroll;
+        top: 100px;
+        left: 320px;
+        width: 1600px;
+        height: 860px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS Kenarlıklar (Border)</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active" href="#home">Temel Bilgiler</h1></li>
+        <li><a  href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a  href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a  href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active" >CSS Sitilleri</h1></li>
+        <li><a  href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><a href="csstablolar.html">CSS Tablolar</a></li>
+        <li><h1 style="text-align: center"  class="active">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a class="active" href="csskenarliklar.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+    </ul>
+</div>
+
+
+<div class="ex2">
+    <br><h2 style="color: darkslateblue">CSS Kenarlıklar (Border)</h2>
+    <br>Bir HTML elementinin kenarlarına çizgi çekerken kullanacağımız kodlar şunlardır:
+    <br><
+    <li>border-style</li>
+    <li>border-width</li>
+    <li>border-color</li>
+    <br>Ayrıca bunlarla birlikte şu konularda da bilgi vereceğiz:
+    <br><li>Kenarları ayrı ayrı şekillendirmek</li>
+    <li> Kenarlık kullanımının kısa yolu</li>
+    <br><h2 style="color: chocolate">border-style: Kenarlık Stili</h2>
+    <br>Kenarların görünüşünün nasıl olacağı ile ilgili bilgi vermemizi sağlar.
+    <br><b>Kullanabileceğiniz stiller:</b>
+    <br><div class="kutu" style="border: 1px #000000 none;width: 500px;background-color: greenyellow">none - Kenarlık yok</div>
+    <br> <div class="kutu" style="border: 1px #000000 dotted;width: 500px;background-color: greenyellow">dotted - Noktalı</div>
+    <br><div class="kutu" style="border: 1px #000000 dashed;width: 500px;background-color: greenyellow">dashed - Kesik çizgili</div>
+    <br><div class="kutu" style="border: 1px #000000 solid;width: 500px;background-color: greenyellow">solid - Çizgi</div>
+    <br><div class="kutu" style="border: 3px #000000 double;width: 500px;background-color: greenyellow">double - Çift çizgi</div>
+    <br><div class="kutu" style="border: 5px #000000 groove;width: 500px;background-color: greenyellow">groove</div>
+    <br><div class="kutu" style="border: 5px #000000 ridge;width: 500px;background-color: greenyellow">ridge</div>
+    <br> <div class="kutu" style="border: 5px #000000 inset;width: 500px;background-color: greenyellow">inset</div>
+    <br> <div class="kutu" style="border: 5px #000000 outset;width: 500px;background-color: greenyellow">outset</div>
+    <br>Örnek bir kullanım:
+    <br><img src="images/csskodu43.png">
+    <br><h2 style="color: chocolate">border-color: Kenarlık Rengi</h2>
+    <br>Kenarlık rengini bu komutla değiştirebiliriz. ÖNCELİKLE MUTLAKA <b>border-style </b>belirtmemiz gerekir, aksi takdirde görüntülenmeyecektir.
+    <br>Örnek bir kullanım:
+    <br><img src="images/csskodu44.png">
+    <br><h2 style="color: chocolate">Kenarları Ayrı Ayrı Şekillendirmek</h2>
+    <br>İstiyorsak yukarı (top), aşağı (bottom), sağ (right) ve sol (left) kenarları ayrı ayrı biçimlendirebiliriz.
+    <br><li>border-left-style - Sol kenarın şekli.</li>
+    <li>border-right-style - Sağ kenarın şekli.</li>
+    <li>border-top-style - Üst kenarın şekli.</li>
+    <li>border-bottom-style - Alt kenarın şekli.</li>
+    <br>    Ayrıca border-style dört kenarın değerini de alacak şekilde yazılabilir. Örneğin:
+    <br><b>border-style: dotted solid double dashed;</b>
+    <br><li>Üst kenar - dotted,</li>
+    <li>Sağ kenar - solid,</li>
+    <li>Alt kenar - double,</li>
+    <li>Sol kenar - dashed.</li>
+    <br>Farkettiyseniz border-style yazdıktan sonra sırasıyla saat yönünde kenarları ayrı ayrı belirttik.
+    <b><br>border-style: dotted solid double;</b>
+    <br><li>Üst kenar - dotted,</li>
+    <li>Sağ ve Sol kenar - solid,</li>
+    <li>Alt kenar - double,</li>
+    <br>Bu kullanımda 4. kenarı yazmadık. Bu kenar solu işaret ettiği için tam tersi olan Sağ taraftaki özelliği alacaktır.
+    <b><br>border-style: dotted solid;</b>
+    <br><li>Üst kenar ve alt kenar - dotted,</li>
+    <li>Sağ ve Sol kenar - solid,</li>
+    <li>Bu kullanımda Yukarı - Aşağı kenarlar ilk yazılan dotted, Sol ve Sağ kenarlar ikinci yazılan solid biçiminde olacaktır.</li>
+    <br><h2 style="color: chocolate">Kenar Belirtmenin Kısa Yolu</h2>
+    <br>Sadece border kullanarak da <b>border-width</b>, border-color ve border-style değerlerini belirtmemiz mümkün. Örneğe bakalım:</br>
+    <br><img src="images/csskodu45.png">
+    <br>Sırasıyla önce border-width değerini yazdık, sonra border-color ve en son border-style ile üç özelliği birlikte kullandık.
+    <br>Bu kısayolu da kenarlara ayrı ayrı uygulamanız mümkün. Bu komutlar:
+    <br><li>border-left - Sol kenar</li>
+    <li>border-right - Sağ kenar</li>
+    <li>border-top - Üst kenar</li>
+    <li>border-bottom - Alt kenar</li>
+
+</div>
+
+</body>
+</html>

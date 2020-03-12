@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS ID ve Class Seçimi</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        overflow-y: scroll;
+        top: 100px;
+        left: 320px;
+        width: 1600px;
+        height: 860px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS ID ve Class Seçimi</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active">Temel Bilgiler</h1></li>
+        <li><a  href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a class="active" href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active">CSS Sitilleri</h1></li>
+        <li><a href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><a href="csstablolar.html">CSS Tablolar</a></li>
+        <li><h1 style="text-align: center"  class="active"">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a href="csskenarliklar.html.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+        <li><a href="">CSS İçten Boşluk (Padding)</a></li>
+
+    </ul>
+</div>
+
+
+<div class="ex2">
+    <h2 style="color: darkslateblue">CSS ID ve Class Seçimi</h2><br>
+    <br>HTML elementleri için stiller belirleyebildiğiniz gibi size özel stiller belirleyip elementlerin "id" ve "class" özelliklerinde bu stili belirterek de kullanabilirsiniz.
+    <br><h2 style="color: darkslateblue">Class Kullanımı</h2>
+    <br>Bir HTML kaynağına baktığınızda bir element (tag) özelliği olarak class="stil" şeklinde bir özellik belirtildiğini görebilirsiniz. Peki neden buna gerek duymuşlar? Örneğin aşağıdaki HTML kodunu inceleyelim:
+    <br><pre>   &lt;div class="stil"&gt;Hoş Geldiniz!&lt;/div&gt;</pre>
+    <br> Yukarıdaki div elementi içinde yer alan class="stil", o div elementi için CSS özellikleri belirtmemizi sağlayan bir yoldur. CSS dosyamızda şu şekilde bir ifade varsa:
+    <br><pre>   .stil {
+      font: 10pt Tahoma, Verdana;
+      color: blue;
+   }
+    </pre>
+    <br>Nokta (.) ile başlayan bir stil oluşturduk ve adını biz verdik. Bu demektir ki class="stil" ile belirttiğimiz tüm elementler 10 punto Tahoma yazı tipinde ve mavi (blue) renginde olacaktır. Tabi istersek sadece tek bir elementte geçerli olmasını sağlayabiliriz. Örneğin sadece DIV elementlerinde geçerli olmasını istiyorsak:
+    <br><pre>   div.stil {
+      font: 10pt Tahoma, Verdana;
+      color: blue;
+   }
+   </pre>
+    <br>".stil" yani seçim adımızın başına div getirmemiz yeterli olacaktır. Bu durumda bu CSS kodu sadece DIV elementlerinde kullanılabilir olacaktır.
+    <br>CLASS özelliği kullanmanın bize sağlayacağı yararlara şöyle bir bakalım:
+    <br><li>Kendimizin adlandırdığı özel stiller yaratmak ve kullanmak</li>
+    <li>Bir stili birden fazla elementte kullanabilmek</li>
+    <li>Stillere CSS de yer verip HTML kodlarımızı sürekli tekrarlanan uzun CSS kodlarından arındırmak</li>
+    <br><h2 style="color: darkslateblue">ID Kullanımı</h2><br>
+    <br>ID özelliği ile de stiller yaratabiliriz. CLASS'tan farklı yanları:
+    <br><li> Sadece tek bir elementte kullanılabilir.</li>
+    <li> Aynı id değeri iki elemente verilemez (Her id sadece tek bir elementte kullanılabilir).</li>
+    <li> Stil dosyamızda CLASS'da . (nokta) kullanırdık, ancak id özelliğine göre stilleme yapacaksak # (diyez) kullanırız.</li>
+    <br>Şimdi bu anlattıklarımızı örnek üzerinde görelim:
+    <br><pre>   &lt;div id="stil"&gt;Hoş Geldiniz!&lt;/div&gt;</pre>
+    <br>Örnekte ID değeri "stil" olan bir DIV elementi görüyoruz. CSS dosyamızda bu elemente özel stil tasarlarken aşağıdaki şekilde kod yapısını oluşturmalıyız:
+    <br><pre>   #stil {
+      font: 10pt Tahoma, Verdana;
+      color: blue;
+   }
+   </pre>
+    <br>Görüldüğü gibi bu kez diyez (#) ile başlattık. Sadece tek bir elemente özel stil tasarlamış olduk (Neden? Çünkü başka bir elementte yine id değeri "stil" belirtilemez.)
+
+    <br> Unutmadan söyleyelim hiçbir ID değeri rakamla başlamaz. ID, HTML dosyasında o elementi bulmamızı sağlar, bu nedenle aynı ismi veremeyiz. Aynı ismi vermemizin diğer yaratacağı sorun Java Script'te bu elementi id özelliğine göre kullanamamak olacaktır. Son olarak bazı tarayıcılar birden fazla aynı id kullanılan HTML dosyalarında stilleri görmezden gelebilir.
+
+</div>
+
+</body>
+</html>

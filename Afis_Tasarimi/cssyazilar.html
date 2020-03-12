@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Yazılar</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        overflow-y: scroll;
+        top: 100px;
+        left: 320px;
+        width: 1600px;
+        height: 860px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS Yazılar</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active" href="#home">Temel Bilgiler</h1></li>
+        <li><a  href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a  href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a  href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active" >CSS Sitilleri</h1></li>
+        <li><a  href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a class="active" href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Listeleme</a></li>
+        <li><a href="csstablolar.html">CSS Tablolar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><h1 style="text-align: center"  class="active">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a href="csskenarliklar.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+
+    </ul>
+</div>
+
+
+<div class="ex2">
+    <h2 style="color: darkslateblue">CSS Yazılar</h2>
+    <br>Bu sayfada HTML sayfanızda kullandığınız yazıların değiştirebileceğiniz belli başlı özellikleri (renk, hiza, kalın vb) hakkında bilgi verilecektir.
+    <br><h2 style="color: chocolate">color: Yazı Rengi</h2>
+    <br>Yazının rengini belirlemenizi sağlar
+    <br><img src="images/csskodu14.png">
+    <br><h2 style="color: chocolate">text-align: Hizalama</h2>
+    <br>Yazının yatay yönde ne şekilde hizalanacağını belirtmenizi sağlar. En çok kullanılan dört hizalama yöntemi:
+    <br><li>left : sol</li>
+    <li>right : sağ</li>
+    <li>center : ortalanmış</li>
+    <li>justify : iki yana yasla</li>
+    <br>Aşağıda paragrafların iki yana yaslanacağını belirttik:
+    <br><img src="images/csskodu15.png">
+    <br><h2 style="color: chocolate">text-decoration: Yazı Biçimi</h2>
+    <br>Yazının biçiminde bazı değişiklikler yapmamızı sağlar. Örneğin tarayıcı varsayılanında sürekli A elementlerindeki altı çizgili dekorasyonu kaldırmak için aşağıdaki yazılabilir.
+    <br><img src="images/csskodu16.png">
+    <br><h2 style="color: chocolate">text-transform: Yazıda Değişiklik Yap</h2>
+    <br>Yazılan bir yazıyı otomatik olarak tüm harflerini büyük harfle yazmayı ya da tamamını küçük harfle yazmayı sağlar.
+    <br><li>uppercase : tüm harfleri büyük harf yap</li>
+    <li>lowercase : tüm harfleri küçük harf yap</li>
+    <br><img src="images/csskodu17.png">
+    <br><h2 style="color: chocolate">text-indent: Soldan Boşluk</h2>
+    <br>Bir yazının başında belirtilen büyüklükte boşluk bırakmanızı sağlar. Özellikle paragraflar için kullanılır.
+    <img src="images/csskodu18.png">
+    <br><b>NOT:</b> Piksel (px), inç (in), punto (pt), santim (cm), yüzde (%) gibi stillerin sonuna eklenen ölçüler her zaman sayıya bitişik yazılır. 50px doğru ancak 50 px yanlış.
+    <br><h2 style="color: chocolate">Diğer Yazı Şekillendirme Komutları</h2>
+    <br><li><b>line-height:</b> Satır yüksekliğini belirtmemizi sağlar.</li>
+    <li><b>letter-spacing:</b> Harfler arasında belirtilen değerde boşluk koyar.</li>
+    <li><b>word-spacing:</b> Kelimeler arasında belirtilen değerde boşluk koyar.</li>
+</div>
+
+</body>
+</html>

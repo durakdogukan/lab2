@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Arkaplanlar</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+    }
+
+    .active{
+        background-color: #4CAF50;
+    }
+    .sidebar ul{
+        width: 300px;
+        height: 100%;
+        background-color: #f1f1f1;
+        position: fixed;
+        display: block;
+        overflow-y: scroll;
+        top: 70px;
+    }
+    .sidebar header{
+        list-style-type: none;
+        position: fixed;
+        font-size: 22px;
+        top: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        line-height:70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    .sidebar ul a{
+        display: block;
+        height: %100;
+        width: %100;
+        line-height: 65px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255,255,255,1);
+        border-bottom: 1px solid black;
+        transition: .4s;
+    }
+    .sidebar ul li:hover a{
+        padding-left: 50px;
+    }
+    .sidebar ul a i{
+        margin-right: 16px;
+    }
+
+    .sidebar li a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+
+    .sidebar li a{
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    .sidebar li a.active{
+        background-color: darkblue;
+        color: white;
+    }
+
+    .ex2{
+        position: fixed;
+        overflow-y: scroll;
+        top: 100px;
+        left: 320px;
+        width: 1600px;
+        height: 860px;
+        font-family: "Comic Sans MS";
+        font-size: 23px;
+    }
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: 30px; /* change this to whatever height you want it */
+    }
+
+
+
+
+
+</style>
+<body>
+
+<div class="sidebar">
+    <header>CSS Arkaplanlar</header>
+    <ul>
+        <li><h1 style="text-align: center"  class="active">Temel Bilgiler</h1></li>
+        <li><a  href="cssogreniyorum.html">CSS Nedir?</a></li>
+        <li><a  href="csskodyapisi.html">CSS Kod Yapısı</a></li>
+        <li><a  href="cssidveclasssecimi.html">CSS ID ve Class Seçimi</a></li>
+        <li><a  href="cssnasıleklenir.html">CSS Nasıl Eklenir?</a></li>
+        <li><h1 style="text-align: center"  class="active" >CSS Sitilleri</h1></li>
+        <li><a class="active" href="cssarkaplanlar.html">CSS Arkaplanlar</a></li>
+        <li><a href="cssyazilar.html">CSS Yazılar</a></li>
+        <li><a href="cssyazitipleri.html">CSS Yazı Tipleri</a></li>
+        <li><a href="cssbaglantilar.html">CSS Bağlantılar</a></li>
+        <li><a href="csslisteleme.html">CSS Listeleme</a></li>
+        <li><a href="csstablolar.html">CSS Tablolar</a></li>
+        <li><h1 style="text-align: center"  class="active">Kenarlıklar</h1></li>
+        <li><a href="csskutumodeli.html">CSS Kutu Modeli</a></li>
+        <li><a href="csskenarliklar.html">CSS Kenarlıklar (Border)</a></li>
+        <li><a href="cssdiskenarlik.html">CSS Dış Kenarlık (Outline)</a></li>
+        <li><a href="cssdistanbosluk.html">CSS Dıştan Boşluk (Margin)</a></li>
+        <li><a href="cssictenbosluk.html">CSS İçten Boşluk (Padding)</a></li>
+        <li><a href="#about">CSS İçten Boşluk (Padding)</a></li>
+
+    </ul>
+</div>
+
+
+<div class="ex2">
+    <h2 style="color: darkslateblue">CSS Arkaplanlar</h2>
+    <br>Bu sayfada HTML sayfanızın ya da sayfanızda bir bölümün arkaplan rengini, resmini ve özelliklerini nasıl belirleyeceğiniz ile ilgili bilgiler bulunmaktadır.
+    <br>CSS arkaplan özellikleri bir HTML nesnesine arkaplan eklemenizde yardımcı olur. Bununla ilgili olarak tanıyacağımız CSS kodları:
+    <br><h2 style="color: chocolate">background-color: Arkaplan Rengi</h2>
+    <br>Bir elementin arkaplan rengini belirlememizi sağlar.
+    <br><img src="images/csskodu7.png">
+    <br><h2 style="color: chocolate">background-image: Arkaplan Resmi</h2>
+    <br>Bir element içinde arkaplan resmi kullanmamızı sağlar.
+    <br><img src="images/csskodu8.png">
+    <br>Yukarıdaki gibi <b>url('')</b> yazılarak arasında resmin adı veya yolu yazılır. Örnekte resmin adı resim.jpg olarak gösterilmiştir.
+    <br><h2 style="color: chocolate">background-repeat: Arkaplan Tekrarı / Döşeli</h2>
+    <br>Kullandığımız arkaplan resminin tekrar edip etmeyeceğini belirtmemizi sağlar. Dört kullanımı vardır:
+    <br><li>no-repeat : Tekrar edilmeyecektir</li>
+    <li>repeat : Tekrarlanacaktır / döşenecektir</li>
+    <li>repeat-x : Sadece sağa doğru tekrar edecektir</li>
+    <li>repeat-y : Sadece aşağı doğru tekrar edecektir</li>
+    <br>Aşağıdaki kullanım örneğini inceleyelim:
+    <br><img src="images/csskodu9.png">
+    <br>Yukarıdaki css kodu resmin tekrarlanmayacağını tarayıcıya bildirir.
+    <br><h2 style="color: chocolate">background-attachment: Arkaplan Sabitliği</h2>
+    <br>Bu kod kullandığımız arkaplanın sabit kalıp kalmayacağı hakkında ayar yapmamızı sağlar. Eğer özellik değerinin sabit kalmasını (yani sayfanın yerine göre değişmemesini) istiyorsak <b>fixed</b> özelliği kullanırız.
+    <br><img src="images/csskodu10.png">
+    <br><h2 style="color: chocolate">background-position: Resmin Nereye Hizalanacağı</h2>
+    <br>Eğer background-repeat özelliğini <b>no-repeat</b> olarak belirlediysek bu kod yardımıyla onun hizalanma şeklini belirleme şansına sahip oluruz.
+    <br><img src="images/csskodu11.png">
+    <br>Yukarıda yer alan kod arkaplan resminin right (sağ) ve top (üst) tarafa doğru hizalanacağını bildirir.
+    <br><h2 style="color: chocolate">background: Arkaplan Belirlemenin Kısa Yolu</h2>
+    <br>Yukarıdaki tüm özellikleri tek bir kodda kullanmanız mümkün. Bunun için kullanacağımız kod: <b>background</b>.
+    <br><img src="images/csskodu12.png">
+    <br>Yukarıdaki kodda belirtilenler sırasıyla: background-color, background-image, background-repeat ve background-position.
+    <h2 style="color: darkslateblue">CSS'de Renk İfadeleri</h2>
+    <br>CSS dosyamızda yer yer renkleri belirtmemiz gerekebilir. Bunun için çeşitli yollar var. Bunlardan en çok kullanılan üç tanesi:
+    <br><li>Onaltılık (Hex) Renkler</li>
+    <li>RGB (Kırmızı, Yeşil, Mavi) Renkler</li>
+    <li>Tarayıcı Renk İsimleri</li>
+    <br><b>Onaltılık (Hex) Renkler:</b>#000000 şeklinde önce diyez sonra 6 adet 0-9 ve A-F değerleri alabilen sembollerden oluşur. Örneğin #404040 bir rengi ifade etmektedir.
+    <br>Bu renk kodlarına resim işlem programlarınız yardımıyla (photoshop, paint shop pro gibi) ulaşabilirsiniz.
+    <br><b>RGB (Kırmızı, Yeşil, Mavi) Renkler:</b>Bir renk oluştururken kırmızı, yeşil ve mavinin tonlarını belirterek renk oluşturmamızı sağlar. Örneğin  rgb( 0, 0, 0 ) siyah rengi belirtir. Mavi bir renk elde etmek istediğimizde Red - Green - Blue üçlemesinde en sonda yer alan mavinin değerini arttırmamız yeterli olur. Yani <b>rgb( 0, 0, 255 )</b> mavi rengi verir. Windows'daki Paint Brush (MS Paint) programı ve diğer resim editörleri yardımıyla RGB değerlerini alarak renk oluşturabilirsiniz.
+    <br><b>Tarayıcı Renk İsimleri:</b>İngilizce olarak belirlenmiş bazı renk adlarını yazarak renk elde edebilirsiniz. Örneğin white beyaz, black siyah, blue mavi rengini verecektir.
+    <br>Aşağıda renklerle ilgili örnek bir kullanım var:
+    <br><img src="images/csskodu13.png">
+</div>
+
+</body>
+</html>
