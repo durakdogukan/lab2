@@ -1,2 +1,1 @@
-# lab2
- Kişisel Web Sayfası, Afiş Tasarımı, CSS Web Sitesi
+![Lab_2 - Afis_Tasarimi ](outputs/Afis_Tasarimi.png)
