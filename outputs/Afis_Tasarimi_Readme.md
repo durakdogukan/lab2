@@ -1,1 +1,1 @@
-![Lab_2 - Afis_Tasarimi ](outputs/Afis_Tasarimi.png)
+(outputs/Afis_Tasarimi.png)
